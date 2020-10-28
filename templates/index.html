@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/fevicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        @media screen and (max-width: 1020px) {
+            .img{
+                display: none;
+            }
+            .insta-form{
+                width: 100% !important;
+            }
+            .content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #fafafa;">
+    <div class="main">
+            <div class="container" >
+                <div class="row" style="height: 100vh; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <div class="col-lg-6 img">
+                            <img class="float-right" src="{{ url_for('static', filename='assets/Capture.JPG') }}" style="max-width: 100%; height: 550px;">
+                    </div>
+                    <div class="col-lg-6  content">
+                        <div class="insta-form border  p-4" style="width: 70%;">
+                            <img class="ml-1 mb-3" src="{{ url_for('static', filename='assets/1200px-Instagram_logo.svg.png') }}" style="max-width: 100%;">
+                                <form method="POST">
+                                        <div class="form-group mb-2">
+                                            <input type="text" name="email" id="email" class="form-control" style="height: 50px;" placeholder="Enter email, phone number or username">
+                                        </div>
+                                        <div class="form-group mt-3">
+                                            <input type="password" name="pass" id="pass" class="form-control" style="height: 50px;" placeholder="Enter password">
+                                        </div>
+                                        <div class="mt-3 mb-4">
+                                            <button class="btn btn-block btn-primary">Login</button>
+                                        </div>
+                                        <hr>
+                                        
+                                        <h5 class="text-center">or</h5>
+                                        <h5 class="text-center" style="color: #0095f6; cursor: pointer;">Login with Facebook</h5>
+                                </form>
+                                <div class="signup mt-4">
+                                    <p class="text-center">Don't have an account? <a style="text-decoration: none;" href="">Sign up</a></p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
